@@ -15,7 +15,7 @@ struct ContentView: View {
             List(viewModel.filteredCities) { city in
                 VStack(alignment: .leading) {
                     Text(city.city).font(.headline)
-                    Text("TEMPERATURE \(city.temperature)°C ")
+                    Text("TEMPERATURE \(city.temperature)°C / \(city.temperatureFahrenheit, specifier: "%.1f")°F")
                         .font(.subheadline)
 
                         .font(.subheadline)
